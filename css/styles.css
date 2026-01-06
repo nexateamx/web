@@ -152,6 +152,46 @@ a {
   position: relative;
 }
 
+/* CONTACT METHODS */
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  color: var(--text-main);
+  transition:
+    transform 0.35s var(--ease),
+    box-shadow 0.35s var(--ease),
+    border 0.35s var(--ease);
+}
+
+.contact-item svg {
+  width: 22px;
+  height: 22px;
+  fill: #25d366;
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 211, 102, 0.5);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.18);
+}
+
+.contact-item:active {
+  transform: scale(0.97);
+}
+
+
 .plan-card.featured::before {
   content: "";
   position: absolute;
