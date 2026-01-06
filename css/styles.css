@@ -196,13 +196,120 @@ a {
   color: var(--accent-blue);
 }
 
-/* Footer */
-.footer {
-  background: #070a12;
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
+/* FOOTER MINIMAL */
+.site-footer {
+  margin-top: 120px;
+  padding: 40px 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.015),
+    rgba(0, 0, 0, 0.25)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+/* Copy */
+.footer-content p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+/* Divider */
+.footer-divider {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-blue),
+    transparent
+  );
+}
+
+/* Links */
+.footer-links {
+  display: flex;
+  gap: 26px;
+}
+
+.footer-links a {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s var(--ease);
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--accent-blue);
+  transition: width 0.25s var(--ease);
+}
+
+.footer-links a:hover {
+  color: var(--accent-blue);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .footer-links {
+    gap: 18px;
+  }
+}
+
+/* LEGAL PAGES */
+.legal-section {
+  padding: 140px 0 100px;
+}
+
+.legal-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.legal-content h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  margin-bottom: 6px;
+}
+
+.legal-updated {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.legal-content section {
+  margin-bottom: 32px;
+}
+
+.legal-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.legal-content p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
 
 /* Responsive */
 .menu-toggle {
@@ -354,3 +461,4 @@ a {
   margin-bottom: 36px;
   line-height: 1.6;
 }
+
